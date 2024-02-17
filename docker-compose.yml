@@ -19,7 +19,7 @@ services:
     command: redis-server --appendonly yes
 
   app:
-    image: grepp/docker_mgmt:myname-0.1
+    image: serinj/docker_mgmt:myname-0.1
     container_name: app
     volumes:
       - app-data:/data

@@ -1,11 +1,11 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/focal64"
-  config.vm.provider "virtualbox" do |vb|
-        vb.memory = 1024
+  config.vm.box = "gyptazy/ubuntu22.04-arm64"
+  config.vm.provider "vmware_desktop" do |vm|
+    vm.memory = 1024
   end
-  config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync__exclude: [".git/"]
+  config.vm.synced_folder ".", "/vagrant"
 
   #config.vm.hostname = "practice.local"
   #config.vm.network "private_network", ip: "192.168.35.11"
