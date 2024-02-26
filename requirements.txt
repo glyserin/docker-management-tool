@@ -4,3 +4,4 @@ celery
 django-cacheops
 redis
 pymysql
+cryptography
